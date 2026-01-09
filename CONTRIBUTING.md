@@ -10,6 +10,97 @@ Thank you for your interest in contributing to DocumentDB. There are several way
 
 Before a new issue is created for a bug or feature request, please check the list of open issues to avoid multiple issues being created for the same bug or feature. If one already exists, add a reaction and relevant comments for additional clarity if needed.
 
+### Bug Reports and Feature Requests
+
+Use [GitHub Issues](https://github.com/documentdb/documentdb/issues) for bug reports and feature requests. We provide issue templates to help you provide the right information:
+
+- **Bug Report**: Use this for unexpected behavior, errors, or regressions
+- **Feature Request**: Use this for new functionality or enhancements
+
+**Triage Process:**
+
+1. **Initial Review**: Maintainers review new issues within 1-2 business days
+2. **Labeling**: Issues are labeled by type (bug, feature, documentation), priority, and component
+3. **Clarification**: If more information is needed, we'll add the `needs-info` label and ask questions
+4. **Assignment**: Issues are assigned to a milestone or marked for community contribution
+5. **Status Updates**: Subscribe to the issue to receive updates on progress
+
+For architectural changes or proposals that span multiple components, see the RFC Process section below.
+
+## RFC Process
+
+For significant architectural changes, new features that span multiple components, or breaking changes, DocumentDB uses a Request for Comments (RFC) process. This provides structured review and transparent decision-making.
+
+### When to Use an RFC
+
+| Use an RFC for | Use an Issue for |
+|----------------|------------------|
+| Architectural changes | Bug fixes |
+| Breaking changes | Minor enhancements |
+| Major new features | Documentation updates |
+| Cross-component work | Single-component refactoring |
+| MongoDB compatibility changes | Configuration tweaks |
+
+### RFC Workflow
+
+```
+Discussion → Issue → PR → Implementation
+```
+
+1. **Discussion** (Optional): Start a [GitHub Discussion](https://github.com/documentdb/documentdb/discussions) in the "RFC Ideas" category to validate your idea
+2. **Issue**: Create an issue using the RFC template to track the proposal
+3. **PR**: Submit your RFC document to the `/rfcs/` directory
+4. **Review**: Maintainers and community review the proposal
+5. **Implementation**: Once accepted, implementation PRs reference the RFC
+
+### Template Structure and Progression
+
+RFC documents use progressive disclosure - start lean, add detail as needed. The template has four sections:
+
+| Section | Required When | Purpose |
+|---------|---------------|---------|
+| **Problem** | Draft → Proposed | Articulate what problem you're solving and why it matters |
+| **Approach** | Proposed → Accepted | Describe your high-level solution and tradeoffs |
+| **Detailed Design** | Before Implementation | Provide technical specifications for implementers |
+| **Implementation Tracking** | During Implementation | Track PRs and progress |
+
+**Progressive workflow:**
+1. Start with just the **Problem** section - get feedback on whether the problem is worth solving
+2. Add the **Approach** section once the problem is validated - propose your solution
+3. Add **Detailed Design** once the approach is accepted - provide implementation-ready specs
+4. Update **Implementation Tracking** as you build - link PRs and track progress
+
+### Review Criteria
+
+When reviewing RFCs, maintainers evaluate:
+
+**Problem Section:**
+- Is the problem clearly articulated?
+- Is there evidence of user/contributor impact?
+- Are success criteria measurable?
+- Are non-goals explicitly stated?
+
+**Approach Section:**
+- Does the solution address the stated problem?
+- Are alternatives considered and tradeoffs documented?
+- Does it align with DocumentDB architecture patterns?
+- Is the scope appropriate (not too broad or narrow)?
+
+**Detailed Design:**
+- Are technical details sufficient for implementation?
+- Are breaking changes identified with migration paths?
+- Is the testing strategy comprehensive?
+- Are documentation updates planned?
+
+### Implementation Tracking
+
+RFCs support incremental implementation across multiple PRs:
+- Reference the RFC in PR descriptions with "Implements RFC-XXXX"
+- Update the RFC's Implementation Tracking section as PRs merge
+- Close the RFC when all implementation is complete
+
+For full details, see [RFC-0003: RFC Process for DocumentDB](./rfcs/0003-rfc-process.md).
+
 ## How to Contribute
 
 We encourage community members to participate by reporting issues, suggesting new features, or contributing code.
